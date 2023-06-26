@@ -47,7 +47,7 @@ This is a file containing example usage of the mentioned methods
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/DapperORMConsoleApp.git
+   git clone https://github.com/teonakuzmanovska/LinkedList.git
 
 2. Open the solution in Visual Studio.
 3. Run the application
