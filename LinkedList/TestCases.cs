@@ -10,10 +10,10 @@ namespace LinkedList
             LinkedList<int> linkedList = new LinkedList<int>();
 
             // Add elements to the linked list
-            linkedList.AddFirst(1);
-            linkedList.AddLast(2);
-            linkedList.AddLast(3);
+            linkedList.AddFirst(2);
             linkedList.AddLast(4);
+            linkedList.AddLast(3);
+            linkedList.AddLast(1);
 
             // Print the initial list
             Console.WriteLine("Initial List:");
@@ -30,6 +30,14 @@ namespace LinkedList
                 Console.Write(item + " ");
             }
             Console.WriteLine("");
+
+            // Test FindLast method
+            LinkedListNode<int> lastNode = linkedList.FindLast(2);
+            if (lastNode != null)
+            {
+                Console.WriteLine("Find last '2' result: " + lastNode.Element.ToString());
+            }
+            Console.WriteLine("Count: " + linkedList.Count);
 
             // Test Find method
             LinkedListNode<int> node = linkedList.Find(3);

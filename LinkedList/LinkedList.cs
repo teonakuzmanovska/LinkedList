@@ -19,14 +19,29 @@ namespace LinkedList
             Count = 0;
         }
 
-        public LinkedListNode<T> FindLast()
+        //returns last node which contains the value
+        public LinkedListNode<T> FindLast(T value)
         {
+            // the list is not empty
             if (First != null)
-                return Last;
+            {
+                LinkedListNode<T> tmp = Last;
+                while(tmp != null)
+                {
+                    if (tmp.Element.Equals(value))
+                    {
+                        return tmp;
+                    }
+                    tmp = tmp.Pred;
+                }
+                Console.WriteLine("Element " + value + " is not in list");
+            }
+            // the list is empty
             else
             {
-                return null;
-            } 
+                Console.WriteLine("List is empty.");
+            }
+            return null;
         }
 
         public LinkedListNode<T> Find(T value)
